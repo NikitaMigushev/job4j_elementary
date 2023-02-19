@@ -15,7 +15,7 @@ public class ConverterTest {
     }
 
     @Test
-    public void whenConvert140RblThen2dot3333() {
+    public void whenConvert180RblThen3() {
         float in = 180;
         float expected = 3;
         float out = Converter.rubbleToDollar(in);
