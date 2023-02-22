@@ -9,7 +9,16 @@ public class MaxTest {
         int left = 1;
         int right = 2;
         int result = Max.max(left, right);
-        int expected = 2;
+        int expected = right;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax2To1Then2() {
+        int left = 2;
+        int right = 1;
+        int result = Max.max(left, right);
+        int expected = left;
         assertThat(result).isEqualTo(expected);
     }
 
@@ -18,7 +27,7 @@ public class MaxTest {
         int left = 15;
         int right = 20;
         int result = Max.max(left, right);
-        int expected = 20;
+        int expected = right;
         assertThat(result).isEqualTo(expected);
     }
 
@@ -27,7 +36,7 @@ public class MaxTest {
         int left = 1;
         int right = 1;
         int result = Max.max(left, right);
-        int expected = 1;
+        int expected = right;
         assertThat(result).isEqualTo(expected);
     }
 }
