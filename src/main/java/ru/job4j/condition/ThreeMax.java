@@ -7,7 +7,9 @@ public class ThreeMax {
             result = first;
         } else if (second >= first && second >= third) {
             result = second;
-        } else result = third;
+        } else {
+            result = third;
+        }
         return result;
     }
 }
