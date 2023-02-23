@@ -30,6 +30,7 @@ class MultipleSwitchWeekTest {
         int expected = 2;
         Assertions.assertEquals(result, expected);
     }
+
     @Test
     void whenTuesdayRusThen2() {
         String day = "Вторник";
