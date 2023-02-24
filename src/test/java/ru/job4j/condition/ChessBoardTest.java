@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ChessBoardTest {
     @Test
-    public void wayRookRookIs6() {
+    public void  wayRookRookIs6() {
         int x1 = 0;
         int y1 = 0;
         int x2 = 0;
