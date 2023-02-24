@@ -2,10 +2,7 @@ package ru.job4j.loop;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-
 class FactorialTest {
-
     @Test
     void whenCalc5Then120() {
         int n = 5;
