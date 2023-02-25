@@ -12,12 +12,8 @@ public class ArrayDefinition {
         names[2] = "William Long";
         names[3] = "Joseph Roman";
 
-        System.out.println(ages.length);
-        System.out.println(surnames.length);
-        System.out.println(prices.length);
-        System.out.println(names[0]);
-        System.out.println(names[1]);
-        System.out.println(names[2]);
-        System.out.println(names[3]);
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]);
+        }
     }
 }
