@@ -24,4 +24,13 @@ public class MatrixCheck {
         }
         return result;
     }
+
+    /*fills a one-dimensional array with diagonal elements from a two-dimensional array*/
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+        return rsl;
+    }
 }
