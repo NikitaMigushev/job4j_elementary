@@ -30,13 +30,25 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenIsMonoVertical() {
+    public void whenColumn2IsMonoVertical() {
         char[][] input = {
                 {' ', ' ', 'X'},
                 {' ', ' ', 'X'},
                 {' ', ' ', 'X'},
         };
         int column = 2;
+        boolean result = MatrixCheck.monoVertical(input, column);
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    public void whenColumn1IsMonoVertical() {
+        char[][] input = {
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+        };
+        int column = 1;
         boolean result = MatrixCheck.monoVertical(input, column);
         assertThat(result).isTrue();
     }
