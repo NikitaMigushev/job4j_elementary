@@ -12,4 +12,16 @@ public class MatrixCheck {
         }
         return result;
     }
+
+    /*checks if a given column in a two-dimensional array is completely filled with "X"*/
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (int row = 1; row < board.length; row++) {
+            if (board[0][column] != board[row][column]) {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
 }
