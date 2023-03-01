@@ -4,8 +4,8 @@ public class MatrixCheck {
     /*checks if a given row in a two-dimensional array is completely filled with "X"*/
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
-        for (int cell = 1; cell < board.length; cell++) {
-            if (board[row][0] != board[row][cell]) {
+        for (int cell = 0; cell < board.length; cell++) {
+            if (board[row][cell] != 'X') {
                 result = false;
                 break;
             }
@@ -16,8 +16,8 @@ public class MatrixCheck {
     /*checks if a given column in a two-dimensional array is completely filled with "X"*/
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
-        for (int row = 1; row < board.length; row++) {
-            if (board[0][column] != board[row][column]) {
+        for (int row = 0; row < board.length; row++) {
+            if (board[row][column] != 'X') {
                 result = false;
                 break;
             }
@@ -32,5 +32,19 @@ public class MatrixCheck {
             rsl[i] = board[i][i];
         }
         return rsl;
+    }
+
+    /*checks for win situation in sokoban*/
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+
+        for (int diagonalCell = 0; diagonalCell < board.length; diagonalCell++) {
+            if (board[diagonalCell][diagonalCell] == 'X' && (monoHorizontal(board, diagonalCell)
+                    || monoVertical(board, diagonalCell))) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 }
