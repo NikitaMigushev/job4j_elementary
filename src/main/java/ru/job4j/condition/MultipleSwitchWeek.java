@@ -1,8 +1,6 @@
 package ru.job4j.condition;
 
 public class MultipleSwitchWeek {
-
-    /*takes name of a weekday in English or Russian as input and produces weekday number as output*/
     public static int numberOfDay(String name) {
         return switch (name) {
             case "Понедельник", "Monday" -> 1;
